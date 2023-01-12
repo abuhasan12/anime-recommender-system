@@ -1,6 +1,11 @@
 # Anime Recommender System
 This notebook presents a content-based anime recommender system that utilizes a dataset containing anime titles, ratings, genres, and synopses. The goal of the system is to find similar animes based on genre and synopsis, and provide recommendations to users.
 
+```python
+get_recommendations("Cowboy Bebop", sort_by='Score')
+```
+![Recommendations](https://github.com/abuhasan12/anime-recommender-system/blob/main/readme_imgs/cowboy_bebop_recommendations.png)
+
 ## Data Cleaning and Pre-processing
 The first step in building the recommender system is to clean and pre-process the data. For this task, we used pyspark to perform the necessary operations. The data was cleaned by removing any missing or duplicate values, and then pre-processed by converting the categorical variables (genres) into numerical ones using one hot encoding.
 
