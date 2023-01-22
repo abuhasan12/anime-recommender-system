@@ -1,10 +1,36 @@
 # Anime Recommender System
-This notebook presents a content-based anime recommender system that utilizes a dataset containing anime titles, ratings, genres, and synopses. The goal of the system is to find similar animes based on genre and synopsis, and provide recommendations to users.
+This app is a content-based anime recommender system that utilizes a dataset containing anime titles, ratings, genres, and synopses. The goal of the system is to find similar animes based on genre and synopsis, and provide recommendations to users.
 
-```python
-get_recommendations("Cowboy Bebop", sort_by='Score')
+## Demo
+
+![demo](https://github.com/abuhasan12/anime-recommender-system/blob/main/demo/Demo.gif)
+
+## Try it yourself!
+
+* If you have cloned the repo, ensure you add the repository to the python path:
+```Command Line
+$ export PYTHON PATH="path/to/repo"
 ```
-![Recommendations](https://github.com/abuhasan12/anime-recommender-system/blob/main/readme_imgs/cowboy_bebop_recommendations.png)
+* From inside the repo on your terminal run:
+```Command Line
+$ python app/api.py
+```
+* Navigate to localhost:8080/docs in your browser.
+
+* Remember to stop your terminal.
+
+## Try it yourself! - Docker
+
+* Run:
+```Command Line
+$ docker run --name [CHOSEN_CONTAINER_NAME] -p 8080:8080 abuh12/anime-rs
+```
+* Navigate to localhost:8080/docs in your browser.
+
+* Stop:
+```Command Line
+$ docker stop [CHOSEN_CONTAINER_NAME]
+```
 
 ## Data Cleaning and Pre-processing
 The first step in building the recommender system is to clean and pre-process the data. For this task, we used pyspark to perform the necessary operations. The data was cleaned by removing any missing or duplicate values, and then pre-processed by converting the categorical variables (genres) into numerical ones using one hot encoding.
